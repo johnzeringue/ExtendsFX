@@ -4,5 +4,17 @@ jdk:
   - oraclejdk8
 
 before_install:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
+before_deploy: ./gradlew jar
+
+deploy:
+  provider: releases
+  api_key:
+    secure: a9AZDjNy/gfECliBcn4YCsIMuCCI6DeMAoUKECX6ED1NSFYLy1elBOIsQfRnGBzyyuZgRUS4w9e/oHuy+gAy5D94MDja+lWVw4hawD1MvYvXEzAqObIW9CZOcbnvCqWCCmijZBL0W9BCw1dYcXOcTESgtvutfJ2XyhiOap9e/zn6so8NuPWO8hbPfF55y3OrF3lHcpRg2JU4itbKrwS6hl166YfOBWzVlrt6IBoJe1o5ZNQF98nGhqpeCslSrpRSsqE0KWUvcCCB73gzKrNL+7AsdTFsfC650PpnUfBCfxk2kxUH/YlrKso4LADHp36Jh3u23/U3QYrVF/kWbB2MCiPzAgQGcmLkRYu2cFV9gIBM3QDOcOinKVSXdcdWs1qzo5NogjcQMTzQOdCkxsVqncm1Le7UUkAToLFlM0Vp8DTsEVjVUQCntMRxC9xEBSSotEf/ZzsC+iEvWsvmNGSfH/M/E/YgZVAftkNV+kS9YeZPJQMCi0V6UKC5UED7rS5MkwbIAFrLCSANDVdIhnDGigPft1dsX1tdwbTclLe61MRHC2dm/hjv/v/7U/uqH8kCAHLNiEPA0hqPpN02YGQNQABQ1qcI4TTzb8I5mArN3gF/iWgBSfIM6VyHbeZqfHyg+J9uzatUKz5UD1S/uaQyaFND7KYDlU6RhnE5r2cR6Qw=
+  file_glob: true
+  file: build/libs/extendsfx-v*.jar
+  on:
+    repo: johnzeringue/ExtendsFX
+    tags: true

@@ -3,6 +3,21 @@ apply plugin: 'java'
 apply plugin: 'findbugs'
 apply plugin: 'maven'
 
+def getVersionName = { ->
+    def stdout = new ByteArrayOutputStream()
+
+    exec {
+        commandLine 'git', 'describe', '--tags'
+        standardOutput = stdout
+    }
+
+    stdout.toString().trim()
+}
+
+jar {
+    version = getVersionName()
+}
+
 tasks.withType(FindBugs) {
     reports {
         xml.enabled = false
