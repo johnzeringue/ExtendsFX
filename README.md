@@ -54,8 +54,13 @@ public class StillJustAButton extends CustomStackPane<StillJustAButton> {
     }
 
     @FXML
+    private void initialize() {
+        System.out.printf("My message is \"%s\".\n", message);
+    }
+
+    @FXML
     private void sayMessage() {
-        System.out.println("Hello world!");
+        System.out.println(message);
     }
 
 }
