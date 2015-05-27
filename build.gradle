@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+apply plugin: 'findbugs'
+apply plugin: 'maven'
+
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
+dependencies {
+    testCompile 'org.testfx:testfx-core:4.0.+'
+    testCompile 'org.testfx:testfx-junit:4.0.+'
+}
+
+repositories {
+    jcenter()
+}
