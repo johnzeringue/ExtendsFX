@@ -1,5 +1,6 @@
 ExtendsFX
 =========
+[![Build Status](https://travis-ci.org/johnzeringue/ExtendsFX.svg?branch=master)](https://travis-ci.org/johnzeringue/ExtendsFX)
 
 ExtendsFX is designed to be a lightweight alternative to other JavaFX frameworks
 such as [afterburner.fx][].
