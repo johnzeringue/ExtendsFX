@@ -29,7 +29,7 @@ my/package/JustAButton.fxml:
 
 ``` xml
 <fx:root xmlns:fx="http://javafx.com/fxml/1"
-         type="javafx.scene.layout.StackPane">
+         type="my.package.JustAButton">
 
     <Button text="Press me!" onAction="#sayHello"/>
 
@@ -70,7 +70,7 @@ my/package/StillJustAButton.fxml:
 
 ``` xml
 <fx:root xmlns:fx="http://javafx.com/fxml/1"
-         type="javafx.scene.layout.StackPane">
+         type="my.package.StillJustAButton">
 
     <Button text="%someResource" onAction="#sayMessage"/>
 
