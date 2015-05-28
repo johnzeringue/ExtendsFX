@@ -25,7 +25,7 @@ import javafx.scene.control.Accordion;
  * @author John Zeringue
  * @param <T>
  */
-public class CustomAccordion<T extends CustomAccordion>
+public abstract class CustomAccordion<T extends CustomAccordion>
         extends Accordion implements CustomComponent {
 
     public CustomAccordion() {

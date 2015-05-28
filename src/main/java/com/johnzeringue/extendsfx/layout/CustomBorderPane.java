@@ -25,7 +25,7 @@ import javafx.scene.layout.BorderPane;
  * @author John Zeringue
  * @param <T>
  */
-public class CustomBorderPane<T extends CustomBorderPane>
+public abstract class CustomBorderPane<T extends CustomBorderPane>
         extends BorderPane implements CustomComponent {
 
     public CustomBorderPane() {

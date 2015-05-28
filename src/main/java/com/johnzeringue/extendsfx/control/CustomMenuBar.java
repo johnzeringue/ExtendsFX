@@ -25,7 +25,7 @@ import javafx.scene.control.MenuBar;
  * @author John Zeringue
  * @param <T>
  */
-public class CustomMenuBar<T extends CustomMenuBar>
+public abstract class CustomMenuBar<T extends CustomMenuBar>
         extends MenuBar implements CustomComponent {
 
     public CustomMenuBar() {

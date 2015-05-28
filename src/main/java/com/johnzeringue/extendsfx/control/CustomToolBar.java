@@ -25,7 +25,7 @@ import javafx.scene.control.ToolBar;
  * @author John Zeringue
  * @param <T>
  */
-public class CustomToolBar<T extends ToolBar>
+public abstract class CustomToolBar<T extends ToolBar>
         extends ToolBar implements CustomComponent {
 
     public CustomToolBar() {

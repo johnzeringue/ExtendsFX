@@ -25,7 +25,7 @@ import javafx.scene.control.DialogPane;
  * @author John Zeringue
  * @param <T>
  */
-public class CustomDialogPane<T extends CustomDialogPane>
+public abstract class CustomDialogPane<T extends CustomDialogPane>
         extends DialogPane implements CustomComponent {
 
     public CustomDialogPane() {
