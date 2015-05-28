@@ -25,7 +25,7 @@ import javafx.scene.layout.VBox;
  * @author John Zeringue
  * @param <T>
  */
-public class CustomVBox<T extends CustomVBox>
+public abstract class CustomVBox<T extends CustomVBox>
         extends VBox implements CustomComponent {
 
     public CustomVBox() {

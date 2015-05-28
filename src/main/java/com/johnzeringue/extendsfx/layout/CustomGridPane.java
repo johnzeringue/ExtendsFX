@@ -25,7 +25,7 @@ import javafx.scene.layout.GridPane;
  * @author John Zeringue
  * @param <T>
  */
-public class CustomGridPane<T extends CustomGridPane>
+public abstract class CustomGridPane<T extends CustomGridPane>
         extends GridPane implements CustomComponent {
 
     public CustomGridPane() {

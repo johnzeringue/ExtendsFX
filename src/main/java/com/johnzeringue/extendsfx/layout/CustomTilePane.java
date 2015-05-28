@@ -25,7 +25,7 @@ import javafx.scene.layout.TilePane;
  * @author John Zeringue
  * @param <T>
  */
-public class CustomTilePane<T extends CustomTilePane>
+public abstract class CustomTilePane<T extends CustomTilePane>
         extends TilePane implements CustomComponent {
 
     public CustomTilePane() {

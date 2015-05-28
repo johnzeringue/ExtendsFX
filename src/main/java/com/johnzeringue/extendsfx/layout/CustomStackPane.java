@@ -25,7 +25,7 @@ import javafx.scene.layout.StackPane;
  * @author John Zeringue
  * @param <T>
  */
-public class CustomStackPane<T extends CustomStackPane>
+public abstract class CustomStackPane<T extends CustomStackPane>
         extends StackPane implements CustomComponent {
 
     public CustomStackPane() {

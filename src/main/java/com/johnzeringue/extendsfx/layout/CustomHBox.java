@@ -25,7 +25,7 @@ import javafx.scene.layout.HBox;
  * @author John Zeringue
  * @param <T>
  */
-public class CustomHBox<T extends HBox>
+public abstract class CustomHBox<T extends HBox>
         extends HBox implements CustomComponent {
 
     public CustomHBox() {

@@ -25,7 +25,7 @@ import javafx.scene.layout.FlowPane;
  * @author John Zeringue
  * @param <T>
  */
-public class CustomFlowPane<T extends CustomFlowPane>
+public abstract class CustomFlowPane<T extends CustomFlowPane>
         extends FlowPane implements CustomComponent {
 
     public CustomFlowPane() {
