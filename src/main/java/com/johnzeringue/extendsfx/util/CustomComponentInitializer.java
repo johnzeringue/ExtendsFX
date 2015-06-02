@@ -16,6 +16,7 @@
 package com.johnzeringue.extendsfx.util;
 
 import com.johnzeringue.extendsfx.CustomComponent;
+import com.johnzeringue.extendsfx.exception.ExtendsFXException;
 import java.io.IOException;
 import java.net.URL;
 import javafx.fxml.FXMLLoader;
@@ -55,11 +56,23 @@ public class CustomComponentInitializer<T extends Parent & CustomComponent> {
         fxmlLoader.setResources(resourceBundleBuilder.build());
     }
 
+    private RuntimeException fxmlNotFoundException() {
+        Package fxmlPackage = customComponent.getClass().getPackage();
+        String fxmlPackageName = fxmlPackage.getName();
+
+        String message = String.format("Expected %s in package %s.",
+                fxmlResourceName(), fxmlPackageName);
+
+        return new ExtendsFXException(message);
+    }
+
     private void loadFXML() {
         try {
             fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
+        } catch (IllegalStateException ex) {
+            throw fxmlNotFoundException();
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
         }
     }
 
