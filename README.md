@@ -49,8 +49,8 @@ public class StillJustAButton extends CustomStackPane<StillJustAButton> {
 
     public StillJustAButton(String message) {
         super(self -> {
-            this.message = message;
-        }
+            self.message = message;
+        });
     }
 
     @FXML
