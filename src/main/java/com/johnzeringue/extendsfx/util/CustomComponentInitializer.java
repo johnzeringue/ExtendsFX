@@ -17,10 +17,11 @@ package com.johnzeringue.extendsfx.util;
 
 import com.johnzeringue.extendsfx.CustomComponent;
 import com.johnzeringue.extendsfx.exception.ExtendsFXException;
-import java.io.IOException;
-import java.net.URL;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+
+import java.io.IOException;
+import java.net.URL;
 
 /**
  *
@@ -53,6 +54,7 @@ public class CustomComponentInitializer<T extends Parent & CustomComponent> {
     private void configureFXMLLoader() {
         fxmlLoader.setRoot(customComponent);
         fxmlLoader.setController(customComponent);
+        fxmlLoader.setBuilderFactory(customComponent.getBuilderFactory());
         fxmlLoader.setResources(resourceBundleBuilder.build());
     }
 

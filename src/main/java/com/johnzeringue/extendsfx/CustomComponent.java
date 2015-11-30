@@ -15,10 +15,19 @@
  */
 package com.johnzeringue.extendsfx;
 
+import javafx.fxml.JavaFXBuilderFactory;
+import javafx.util.BuilderFactory;
+
 /**
  *
  * @author John Zeringue
  */
 public interface CustomComponent {
+
+    static BuilderFactory DEFAULT_BUILDER_FACTORY = new JavaFXBuilderFactory();
+
+    default BuilderFactory getBuilderFactory() {
+        return DEFAULT_BUILDER_FACTORY;
+    }
 
 }
