@@ -26,9 +26,6 @@ tasks.withType(FindBugs) {
 }
 
 dependencies {
-    compile 'org.controlsfx:controlsfx:8.20.8'
-
-    testCompile 'org.testfx:testfx-core:4.0.+'
     testCompile 'org.testfx:testfx-junit:4.0.+'
 }
 
